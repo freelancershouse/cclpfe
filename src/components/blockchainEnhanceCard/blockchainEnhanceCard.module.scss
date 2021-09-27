@@ -1,0 +1,38 @@
+@import "../../styles/mixins.scss";
+.cardWrapper {
+    width: 235px;
+    height: 166px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #121212;
+    background: rgba(217, 215, 255, 0.2);
+    border-radius: 9.56913px;
+    padding: 25px 20px;
+    @include media-query(lg) {
+        width: 218px;
+    }
+    svg {
+        width: 75px;
+        height: 75px;
+        margin-bottom: 18px;
+    }
+    @include media-query(sm) {
+        width: 125px;
+        height: 80px;
+        font-size: 12px;
+        line-height: 16px;
+        padding: 5px 5px;
+        svg {
+            width: 25px;
+            height: 25px;
+            margin-bottom: 5px;
+        }
+    }
+}

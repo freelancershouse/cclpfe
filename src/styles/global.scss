@@ -1,0 +1,82 @@
+@import "./mixins.scss";
+@import "./fonts.scss";
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.blogCardWrapper {
+    border-radius: 8px;
+    height: 475px;
+    img {
+        height: 221px;
+        object-fit: cover;
+        border-radius: 8px 8px 0 0;
+    }
+    .ant-card-body {
+        .ant-card-meta {
+            .ant-card-meta-description {
+                margin: 48px 0px;
+            }
+        }
+        .cardFooter {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 800;
+            font-size: 16px;
+            line-height: 25px;
+            letter-spacing: 0.352941px;
+            font-feature-settings: "salt" on, "liga" off;
+            span {
+                color: #6f74ff;
+                text-transform: uppercase;
+            }
+            svg {
+                color: #404852;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    @include media-query(sm) {
+        height: 297px;
+        img {
+            height: 80px;
+        }
+        .ant-card-body {
+            padding: 10px;
+            .ant-card-meta {
+                .ant-card-meta-description {
+                    margin: 5px 0px;
+                    font-size: 12px;
+                    text-overflow: ellipsis;
+                }
+            }
+            .cardFooter {
+                align-items: center;
+                margin-top: 10px;
+                font-size: 14px;
+                line-height: 25px;
+            }
+        }
+    }
+}
+
+.solutionBlog {
+    .ant-col:last-of-type {
+        max-width: 100%;
+        flex: 1;
+        .ant-card-body {
+            margin-top: 20px;
+            // .ant-card-meta {
+            //     .ant-card-meta-description {
+            //         // height: 70px;
+            //     }
+            // }
+        }
+    }
+}

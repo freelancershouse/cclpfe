@@ -1,0 +1,60 @@
+@import "../../styles/mixins.scss";
+
+.insightCardWrapper {
+    img {
+        border-radius: 8px;
+        height: 251px;
+        width: 100%;
+        object-fit: cover;
+        @include media-query(sm) {
+            height:auto;
+        }
+    }
+
+    .title {
+        display: flex;
+        flex-direction: row;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 27px;
+        letter-spacing: 0.5px;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    .description {
+        margin-top: 16px;
+        font-size: 14px;
+        line-height: 23.8px;
+        letter-spacing: 0.35px;
+        font-feature-settings: "salt" on, "liga" off;
+        color: rgba(137, 137, 137, 1);
+    }
+
+    .learnMore {
+        cursor: pointer;
+        margin-top: 16px;
+        font-weight: 700;
+        color: rgba(111, 117, 255, 1);
+        span {
+            color: rgba(111, 117, 255, 1);
+        }
+
+        svg {
+            margin-left: 10px;
+        }
+    }
+
+    @include media-query(sm) {
+        margin-top: 20px;
+        .title {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        .description {
+            font-size: 12px;
+            line-height: 20px;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+@use 'sass:map';
+@import "./variables.scss";
+$breakpoints: ( xs: 425px, sm: 768px, md: 1024px, lg: 1440px, xl: 2560px, xsm: 575px, smlg:1366px, );
+@mixin media-query($key) {
+    $size: map-get($breakpoints, $key);
+    @media (max-width: $size) {
+        @content;
+    }
+}
+
+@mixin media-query-max($size) {
+    @media (max-width: $size) {
+        @content;
+    }
+}
+
+@function color($color) {
+    @return map-get($colors, $color);
+}

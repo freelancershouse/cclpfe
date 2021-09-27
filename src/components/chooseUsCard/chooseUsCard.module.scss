@@ -1,0 +1,45 @@
+@import "../../styles/mixins.scss";
+
+.chooseUsCard {
+    display: flex;
+
+    svg {
+        margin-right: 30px;
+        width: 42px;
+        height: 42px;
+    }
+
+    .meta {
+        display: flex;
+        flex-direction: column;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 27px;
+        letter-spacing: 0.5px;
+        color: #121212;
+        .description {
+            margin-top: 10px;
+            font-size: 16px;
+            line-height: 26px;
+            letter-spacing: 0.35px;
+            font-feature-settings: "salt" on, "liga" off;
+            color: #404852;
+            font-weight: 400;
+        }
+    }
+
+    @include media-query(sm) {
+        svg {
+            margin-right: 15px;
+            width: 25px;
+            height: 25px;
+        }
+        .meta {
+            .description {
+                font-size: 12px;
+                line-height: 16px;
+                display: none;
+            }
+        }
+    }
+}

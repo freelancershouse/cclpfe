@@ -1,0 +1,37 @@
+@import "../../styles/mixins.scss";
+.header {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    padding: 0px;
+    .width100 {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        ul {
+            background-color: transparent;
+            color: black;
+            border: none;
+            li {
+                color: black !important;
+                border: none;
+            }
+        }
+        .logo {
+            align-items: center;
+            display: flex;
+        }
+    }
+    .cta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    @include media-query(sm) {
+        padding: 0 10px;
+        .cta {
+            display: none;
+        }
+    }
+}

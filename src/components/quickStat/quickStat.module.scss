@@ -1,0 +1,53 @@
+@import "../../styles/mixins.scss";
+
+.quickStats {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .title {
+        font-weight: bold;
+        font-size: 56px;
+        line-height: 74px;
+        letter-spacing: -2px;
+        color: #ffffff;
+    }
+
+    .description {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 27px;
+        text-align: center;
+        letter-spacing: 0.5px;
+        color: #ffffff;
+        flex: none;
+        order: 2;
+        flex-grow: 0;
+        margin: 4px 0px;
+    }
+
+    @include media-query(sm) {
+        svg {
+            width: 20px;
+            height: 20px;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 16px;
+        }
+
+        .description {
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+}
